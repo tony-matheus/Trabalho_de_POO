@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/Manager.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/all.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.js"></script>
+
+</head>
+<body>
+    <button type="button" id="create_client" name="button" onclick="callModal()">Client</button>
+    <button type="button" id="create_client" name="button" onclick="createOrder()">ORDER</button>
+    <div class="container">
+        <div class="row">
+        <div class="col">
+            <div class="modal" tabindex="-1" role="dialog" id="modal-client">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Novo Cliente</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col col-md-3">
+                                    <label>Cliente</label>
+                                    <input type="text" class="form_control" id="client_name" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" onclick="createOrder()">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pizza-tab" data-toggle="pill" href="#pizza" role="tab" aria-controls="pills-home" aria-selected="true">Pizzas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="meal-tab" data-toggle="pill" href="#meal" role="tab" aria-controls="pills-profile" aria-selected="false">Refeições</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="drinks-tab" data-toggle="pill" href="#drinks" role="tab" aria-controls="pills-contact" aria-selected="false">Bebidas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="dessert-tab" data-toggle="pill" href="#dessert" role="tab" aria-controls="pills-contact" aria-selected="false">Dessert</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pizza" role="tabpanel" aria-labelledby="pills-home-tab"></div>
+                <div class="tab-pane fade" id="meal" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
+                <div class="tab-pane fade" id="drinks" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
+                <div class="tab-pane fade" id="dessert" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
+            </div>
+        </div>
+        <div class="col-6">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pizza-tab" data-toggle="pill" href="#pizza" role="tab" aria-controls="pills-home" aria-selected="true">Pedido</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pizza" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <ul id="order">
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="form-group">
+            <div class="row">
+                <div class="col col-md-3">
+                    <label>Nome</label>
+                    <input type="text" class="form_control" id="name" size="20" maxlength="20">
+                </div>
+                <div class="col col-md-3">
+                    <label>Telefone</label>
+                    <input type="text" class="form_control" id="phone" size="20" maxlength="20">
+                </div>
+            </div>
+            <div class="row row-md-3">
+                <div class="col col-md-3">
+                    <label>Rua/Avenida/travessa</label>
+                    <input type="text" class="form_control" id="street" size="20" maxlength="20">
+                </div>
+                <div class="col col-md-3" >
+                    <label>Numero</label>
+                    <input type="text" class="form_control" id="number" size="20" maxlength="20">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col col-md-3">
+                    <label>Ponto de referencia</label>
+                    <input type="text" class="form_control" id="reference_point" size="20" maxlength="20">
+                </div>
+            </div>
+        </div>
+        <input type="button" name="" value="Criar Client" onclick="createClient()"></input>
+    </div>
+
+</body>
+</html>
