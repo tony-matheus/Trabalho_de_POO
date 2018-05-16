@@ -8,7 +8,7 @@ $(document).ready(function () {
 var Menu = {
     Gerate : function(menu)
     {
-        $.post("http://localhost/projeto_belson_active/index.php/manager/find" + upCaseFirst(menu), {
+        $.post("http://localhost/Trabalho_de_POO/index.php/manager/find" + upCaseFirst(menu), {
         }, function (response) {
             var menu_list = '';
             $.each(response, function (index, value) {
@@ -131,7 +131,7 @@ var Order = {
                 amount : parseInt($(".amount-"+data.item).html().replace('x', ''))
             });
         });
-        $.post("http://localhost/projeto_belson_active/index.php/Manager/createOrder",{
+        $.post("http://localhost/Trabalho_de_POO/index.php/Manager/createOrder",{
             data_insert_order : data_insert_order,
             check_params : check_params
         }, function(response){
@@ -154,7 +154,7 @@ var Order = {
 
 var Client = {
     FindAll : function(){
-        $.post("http://localhost/projeto_belson_active/index.php/manager/getClients", {
+        $.post("http://localhost/Trabalho_de_POO/index.php/manager/getClients", {
         }, function (response_client) {
             var clients = [
                 {
@@ -188,7 +188,7 @@ var Client = {
             reference_point: $("#reference_point").val()
         };
 
-        $.post("http://localhost/projeto_belson_active/index.php/manager/createClient", {
+        $.post("http://localhost/Trabalho_de_POO/index.php/manager/createClient", {
             client: client,
             client_address: client_address
         }, function (response) {
@@ -205,7 +205,7 @@ var Client = {
 
 var Deliveryman = {
     FindAll : function(){
-        $.post("http://localhost/projeto_belson_active/index.php/manager/getDeliverymans", {
+        $.post("http://localhost/Trabalho_de_POO/index.php/manager/getDeliverymans", {
         }, function (response_deliveryman) {
             let deliveryman = [
                 {

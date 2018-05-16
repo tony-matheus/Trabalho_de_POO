@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 var Order = {
     FindAll : function () {
-        $.post("http://localhost/projeto_belson_active/index.php/manager/getOrder", {
+        $.post("http://localhost/Trabalho_de_POO/index.php/manager/getOrder", {
         }, function (response) {
             let list_order = "";
             let opacity_class = ["", "", "opacity-on", "opacity-on"];
@@ -31,7 +31,7 @@ var Order = {
     },
     UpdateStatus : function (id, status_code){
         id, status_code
-        $.post("http://localhost/projeto_belson_active/index.php/Manager/alterStatus", {
+        $.post("http://localhost/Trabalho_de_POO/index.php/Manager/alterStatus", {
             id          : id,
             status_code : status_code
         },function(response) {
@@ -74,7 +74,7 @@ function createListItems(items)
 
 var Deliveryman = {
     FindAll: function () {
-        $.post("http://localhost/projeto_belson_active/index.php/manager/getDeliverymans", {
+        $.post("http://localhost/Trabalho_de_POO/index.php/manager/getDeliverymans", {
         }, function (response) {
             let list_delivery = "";
             $.each(response, function (index, value) {
@@ -97,7 +97,7 @@ var Deliveryman = {
 
 var ItemsOrder = {
     FindAll: function () {
-        $.post("http://localhost/projeto_belson_active/index.php/manager/getItemsOrder", {
+        $.post("http://localhost/Trabalho_de_POO/index.php/manager/getItemsOrder", {
         }, function (response) {
             let list_product = "";
             $.each(response, function (index, value) {

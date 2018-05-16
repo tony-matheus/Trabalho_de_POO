@@ -25,7 +25,7 @@ function createOrder()
 {
     let client_id = $("#client_name").val();
     let argument = {client_id:client_id}
-    $.post("http://localhost/projeto_belson_active/projeto_belson_active/index.php/manager/createOrder",{
+    $.post("http://localhost/Trabalho_de_POO/Trabalho_de_POO/index.php/manager/createOrder",{
         client_id:client_id
     },function(response){
         console.log(response);
@@ -44,7 +44,7 @@ function createOrder()
 //         id_client : id_client,
 //         itens:itens
 //     }
-//     $.post("http://localhost/projeto_belson_active/index.php/manager/createOrder",{
+//     $.post("http://localhost/Trabalho_de_POO/index.php/manager/createOrder",{
 //         order : order
 //     },function(response){
 //
@@ -54,7 +54,7 @@ function createOrder()
 let generateMenu = {
     Pizza : function()
     {
-        $.post("http://localhost/projeto_belson_active/index.php/manager/findPizza",{
+        $.post("http://localhost/Trabalho_de_POO/index.php/manager/findPizza",{
         },function(response){
             var template = {
                 listmenu : '<li class="list-group-item" id="pizza_@id"><img src="img/plus.svg" height="17px" width="20px">    <img src="img/negative.svg" height="17px" width="20px">    @name - @price - @size </li>'
@@ -70,7 +70,7 @@ let generateMenu = {
     },
     Meal : function()
     {
-        $.post("http://localhost/projeto_belson_active/index.php/manager/findMeal",{
+        $.post("http://localhost/Trabalho_de_POO/index.php/manager/findMeal",{
         },function(response){
             var template = {
                 listmenu : '<li class="list-group-item" id="meal_@id"><img src="img/plus.svg" height="17px" width="20px">  <img src="img/negative.svg" height="17px" width="20px">  @name - @price </li>'
@@ -86,7 +86,7 @@ let generateMenu = {
     },
     Drinks : function()
     {
-        $.post("http://localhost/projeto_belson_active/index.php/manager/findDrink",{
+        $.post("http://localhost/Trabalho_de_POO/index.php/manager/findDrink",{
         },function(response){
             var template = {
                 listmenu : '<li class="list-group-item" id="drinks_@id"><img src="img/plus.svg" height="17px" width="20px">  <img src="img/negative.svg" height="17px" width="20px">   @name - @price </li>'
@@ -102,7 +102,7 @@ let generateMenu = {
     },
     Dessert : function()
     {
-        $.post("http://localhost/projeto_belson_active/index.php/manager/findDessert",{
+        $.post("http://localhost/Trabalho_de_POO/index.php/manager/findDessert",{
         },function(response){
             var template = {
                 listmenu : '<li class="list-group-item dessert_@id"> <a id="dessert_@id" onclick="OrderManipulation(this.id)" ><img  src="img/plus.svg" height="17px" width="20px"></a> <img src="img/negative.svg" id="dessert_@id" onclick="OrderManipulation(this.id, "remove") height="17px" width="20px" style="display:none" >  @name - @price <span id="qtd_dessert_@id"></span></li>'
@@ -151,7 +151,7 @@ function createClient()
     let number = $("#number").val();
     let reference_point = $("#reference_point").val();
 
-    $.post("http://localhost/projeto_belson_active/index.php/manager/createClient", {
+    $.post("http://localhost/Trabalho_de_POO/index.php/manager/createClient", {
         name            : name,
         phone           : phone,
         street          : street,

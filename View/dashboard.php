@@ -31,10 +31,10 @@
 		<div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
 			<ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-					<a class="nav-link" href="http://localhost/projeto_belson_active/index.php/Dashboard">Dashboard <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="http://localhost/Trabalho_de_POO/index.php/Dashboard">Dashboard <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="http://localhost/projeto_belson_active/index.php/Manager">Pedido</a>
+					<a class="nav-link" href="http://localhost/Trabalho_de_POO/index.php/Manager">Pedido</a>
 				</li>
 			</ul>
 		</div>
